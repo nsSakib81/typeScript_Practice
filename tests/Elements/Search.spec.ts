@@ -17,11 +17,13 @@ test.describe("Frames Leading Concept", () => {
         const element = page.locator("input[name='username']");
         await element?.fill("nsSakib81");
         await element?.press("Enter");
-        await page.locator("app-gitrepos ol li").last().waitFor({ state: "visible"});
+        await page.locator("app-gitrepos ol li").last().waitFor({ state: "visible" });
         const repos = await page.locator("app-gitrepos ol li").count();
         console.log(repos);
+        await page.screenshot({ path: 'screenshot1.png', fullPage: true }); //For taking screenshot of the output
 
     })
+
     test.afterAll(async () => {
 
         await page.waitForTimeout(2000);
