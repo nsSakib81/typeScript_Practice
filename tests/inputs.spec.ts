@@ -15,12 +15,12 @@ test.describe("Learn How to handle alert", () => {
     })
 
     test("Enter your full Name", async () => {
-        const name = await page.$("#fullName");
+        const name = await page.locator("#fullName");
         await name?.type("Nazmus Sakib");
 
     })
     test("Append a text and press keyboard tab", async () => {
-        const join = await page.$("#join")
+        const join = await page.locator("#join")
         await join?.focus();
         await page.keyboard.press("End")
         await join?.type("Human")

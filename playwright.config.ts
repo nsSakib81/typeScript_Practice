@@ -35,7 +35,7 @@ export default defineConfig({
     trace: 'on',
 
   },
-  testMatch: ["visual.spec.ts"],
+  //testMatch: ["visual.spec.ts"],
 
   /* Configure projects for major browsers */
   projects: [
