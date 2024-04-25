@@ -22,8 +22,8 @@ test.describe("Learn How to handle alert", () => {
     test("Append a text and press keyboard tab", async () => {
         const join = await page.locator("#join")
         await join?.focus();
-        await page.keyboard.press("End")
-        await join?.type("Human")
+        await page.keyboard.press("End");
+        await join?.type("Human");
     })
     test("What is inside the text box", async () => {
         const text = await page.getAttribute("id=getMe", "value");
